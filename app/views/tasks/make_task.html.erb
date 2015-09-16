@@ -1,0 +1,12 @@
+<%= form_tag :action => 'make_task' do %>
+	<p>Enter task name: 
+	<%= text_field_tag 'task_name', @task %></p>
+	<%= submit_tag 'Create Task' %>
+<% end %>
+
+<p>Task List</p>
+<ul>
+	<% @tasks.each do |task| %>
+		<li><%= task.name %></li>
+	<% end %>
+</ul>
